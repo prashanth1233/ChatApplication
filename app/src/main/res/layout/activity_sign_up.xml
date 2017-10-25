@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bgColor"
+    tools:context="com.example.prasanth.chatapp.activities.SignUpActivity">
+
+    <RelativeLayout
+        android:id="@+id/SignUpHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/sign_in_header_color">
+
+        <com.example.prasanth.chatapp.cutomviews.ChatAppCustomTextView
+            android:id="@+id/signUpHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Sign Up"
+            android:textSize="20dp">
+        </com.example.prasanth.chatapp.cutomviews.ChatAppCustomTextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="120dp">
+
+        <LinearLayout
+            android:id="@+id/signUpuserNameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.example.prasanth.chatapp.cutomviews.ChatAppCustomEditTextView
+                android:id="@+id/signUpUserNameET"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter UserName"
+                android:imeOptions="actionNext"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signUpPasswordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signUpuserNameLayout"
+            android:orientation="horizontal">
+
+            <com.example.prasanth.chatapp.cutomviews.ChatAppCustomEditTextView
+                android:id="@+id/:signUpPasswordET"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signUpuserReenterPasswordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signUpPasswordLayout"
+            android:orientation="horizontal">
+
+            <com.example.prasanth.chatapp.cutomviews.ChatAppCustomEditTextView
+                android:id="@+id/:signUpReenterPasswordET"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Reenter Password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mobileNumberLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signUpuserReenterPasswordLayout"
+            android:orientation="horizontal">
+
+            <com.example.prasanth.chatapp.cutomviews.ChatAppCustomEditTextView
+                android:id="@+id/:mobileNumberET"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:hint="Enter Mobile Number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="10" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/emailAddressLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mobileNumberLayout"
+            android:orientation="horizontal">
+
+            <com.example.prasanth.chatapp.cutomviews.ChatAppCustomEditTextView
+                android:id="@+id/emailAddressET"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Email"
+                android:imeOptions="actionNext"/>
+        </LinearLayout>
+
+        <com.example.prasanth.chatapp.cutomviews.ChatAppCustomButton
+            android:id="@+id/SignUpButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailAddressLayout"
+            android:background="@drawable/submit_button_shape"
+            android:text="Sign Up" />
+
+        <com.example.prasanth.chatapp.cutomviews.ChatAppCustomTextView
+            android:id="@+id/signInPageLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/SignUpButton"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Already a member? SignIn"
+            android:textSize="20dp">
+
+        </com.example.prasanth.chatapp.cutomviews.ChatAppCustomTextView>
+
+    </RelativeLayout>
+</RelativeLayout>

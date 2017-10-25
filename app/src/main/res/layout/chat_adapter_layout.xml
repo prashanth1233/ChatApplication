@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/senderMessageRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp">
+
+        <com.example.prasanth.chatapp.cutomviews.ChatAppCustomTextView
+            android:id="@+id/senderMessageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/chat_textview"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            android:visibility="visible"
+            fonts:customFont="roboto_regular.ttf" />
+
+        <ImageView
+            android:id="@+id/messageSeenStatusIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/senderMessageTV"
+            android:background="@drawable/sent" />
+    </RelativeLayout>
+
+    <com.example.prasanth.chatapp.cutomviews.ChatAppCustomTextView
+        android:id="@+id/receiverMessageTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:textColor="@android:color/black"
+        android:padding="5dp"
+        android:visibility="visible"
+        android:background="@drawable/chat_textview"
+        fonts:customFont="roboto_regular.ttf"/>
+
+</LinearLayout>

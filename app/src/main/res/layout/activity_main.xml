@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bgColor"
+    tools:context="com.example.prasanth.chatapplication.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/signInHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/sign_in_header_color"
+        android:orientation="vertical">
+
+        <com.example.prasanth.chatapp.cutomviews.ChatAppCustomTextView
+            android:id="@+id/signInName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Sign In"
+            android:textSize="20sp"
+            app:customFont="roboto_light.ttf">
+
+        </com.example.prasanth.chatapp.cutomviews.ChatAppCustomTextView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/userDetailsMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/signInHeader"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="70dp">
+
+            <LinearLayout
+                android:id="@+id/userNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.example.prasanth.chatapp.cutomviews.ChatAppCustomEditTextView
+                    android:id="@+id/userNameET"
+                    style="@style/editTextStyle"
+                    customFont="roboto_light.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter UserName"
+                    android:imeOptions="actionNext"
+                    android:maxLength="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/passwordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userNameLayout">
+
+                <com.example.prasanth.chatapp.cutomviews.ChatAppCustomEditTextView
+                    android:id="@+id/passwordET"
+                    style="@style/editTextStyle"
+                    customFont="robot_light.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="10"/>
+            </LinearLayout>
+
+            <com.example.prasanth.chatapp.cutomviews.ChatAppCustomButton
+                android:id="@+id/signInButton"
+                customFont="roboto_regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/passwordLayout"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/submit_button_shape"
+                android:text="Sign In"
+                android:textSize="20sp" />
+
+            <com.example.prasanth.chatapp.cutomviews.ChatAppCustomTextView
+                android:id="@+id/signUpTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signInButton"
+                android:layout_marginTop="10dp"
+                android:text="New User? SignUp"
+                android:textSize="18sp"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

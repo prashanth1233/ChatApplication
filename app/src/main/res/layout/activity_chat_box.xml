@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.prasanth.chatapp.activities.ChatBoxActivity">
+<RelativeLayout
+    android:id="@+id/displayUserName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.example.prasanth.chatapp.cutomviews.ChatAppCustomTextView
+        android:id="@+id/userNmaeData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:gravity="center">
+    </com.example.prasanth.chatapp.cutomviews.ChatAppCustomTextView>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chatUIRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/displayUserName"
+        android:layout_marginTop="20dp">
+    </android.support.v7.widget.RecyclerView>
+
+<LinearLayout
+    android:id="@+id/chatBoxUILL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal">
+    <com.example.prasanth.chatapp.cutomviews.ChatAppCustomEditTextView
+        android:id="@+id/textEnterBox"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:maxLength="10"
+        android:hint="Enter Message"
+        android:background="@drawable/edit_text_shape">
+    </com.example.prasanth.chatapp.cutomviews.ChatAppCustomEditTextView>
+    <ImageButton
+        android:id="@+id/sendMessageBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/app_icon"/>
+    </LinearLayout>
+
+</RelativeLayout>
